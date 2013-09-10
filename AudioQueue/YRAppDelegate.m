@@ -7,8 +7,8 @@
 //
 
 #import "YRAppDelegate.h"
-
 #import "YRViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation YRAppDelegate
 
@@ -24,8 +24,14 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[YRViewController alloc] initWithNibName:@"YRViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    UINavigationController * navigationController = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease] ;
+    self.window.rootViewController = navigationController ;
     [self.window makeKeyAndVisible];
+    
+    [[AVAudioSession sharedInstance] setActive:YES error:nil] ;
+    BOOL res = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil] ;
+    NSAssert(res, @"error") ;
+    
     return YES;
 }
 

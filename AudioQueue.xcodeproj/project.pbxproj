@@ -18,6 +18,10 @@
 		277F19D517D75F8600398C2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F19D417D75F8600398C2B /* Default-568h@2x.png */; };
 		277F19D817D75F8600398C2B /* YRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F19D717D75F8600398C2B /* YRViewController.m */; };
 		277F19DB17D75F8600398C2B /* YRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F19D917D75F8600398C2B /* YRViewController.xib */; };
+		277F19E317D7611200398C2B /* RecordHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 277F19E217D7611200398C2B /* RecordHelper.mm */; };
+		277F19E517D7645100398C2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277F19E417D7645100398C2B /* AudioToolbox.framework */; };
+		277F19EB17D7F3E500398C2B /* PlayHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 277F19EA17D7F3E500398C2B /* PlayHelper.mm */; };
+		277FAF5417DDFE26009945AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277FAF5317DDFE26009945AA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		277F19D617D75F8600398C2B /* YRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRViewController.h; sourceTree = "<group>"; };
 		277F19D717D75F8600398C2B /* YRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRViewController.m; sourceTree = "<group>"; };
 		277F19DA17D75F8600398C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YRViewController.xib; sourceTree = "<group>"; };
+		277F19E117D7611200398C2B /* RecordHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordHelper.h; sourceTree = "<group>"; };
+		277F19E217D7611200398C2B /* RecordHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecordHelper.mm; sourceTree = "<group>"; };
+		277F19E417D7645100398C2B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		277F19E917D7F3E500398C2B /* PlayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayHelper.h; sourceTree = "<group>"; };
+		277F19EA17D7F3E500398C2B /* PlayHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayHelper.mm; sourceTree = "<group>"; };
+		277FAF5317DDFE26009945AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277FAF5417DDFE26009945AA /* AVFoundation.framework in Frameworks */,
+				277F19E517D7645100398C2B /* AudioToolbox.framework in Frameworks */,
 				277F19BF17D75F8600398C2B /* UIKit.framework in Frameworks */,
 				277F19C117D75F8600398C2B /* Foundation.framework in Frameworks */,
 				277F19C317D75F8600398C2B /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +85,8 @@
 		277F19BD17D75F8600398C2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				277FAF5317DDFE26009945AA /* AVFoundation.framework */,
+				277F19E417D7645100398C2B /* AudioToolbox.framework */,
 				277F19BE17D75F8600398C2B /* UIKit.framework */,
 				277F19C017D75F8600398C2B /* Foundation.framework */,
 				277F19C217D75F8600398C2B /* CoreGraphics.framework */,
@@ -89,6 +103,10 @@
 				277F19D717D75F8600398C2B /* YRViewController.m */,
 				277F19D917D75F8600398C2B /* YRViewController.xib */,
 				277F19C517D75F8600398C2B /* Supporting Files */,
+				277F19E117D7611200398C2B /* RecordHelper.h */,
+				277F19E217D7611200398C2B /* RecordHelper.mm */,
+				277F19E917D7F3E500398C2B /* PlayHelper.h */,
+				277F19EA17D7F3E500398C2B /* PlayHelper.mm */,
 			);
 			path = AudioQueue;
 			sourceTree = "<group>";
@@ -177,6 +195,8 @@
 				277F19CB17D75F8600398C2B /* main.m in Sources */,
 				277F19CF17D75F8600398C2B /* YRAppDelegate.m in Sources */,
 				277F19D817D75F8600398C2B /* YRViewController.m in Sources */,
+				277F19E317D7611200398C2B /* RecordHelper.mm in Sources */,
+				277F19EB17D7F3E500398C2B /* PlayHelper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +317,7 @@
 				277F19E017D75F8600398C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

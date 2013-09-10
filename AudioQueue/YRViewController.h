@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecordHelper.h"
+#import "PlayHelper.h"
 
 @interface YRViewController : UIViewController
+{
+    RecordHelper * recordHelper ;
+    PlayHelper * playHelper ;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView * tableView ;
+
+@property (nonatomic, assign) NSUInteger index ;
+@property (nonatomic, retain) NSString * detail ;
+@property (nonatomic, copy) void (^completeBlock)(NSUInteger) ;
 
 @end
